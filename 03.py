@@ -8,7 +8,7 @@ b=a["fruits"]
 print(b)
 # 값 추가 및 수정하기
 # 딕셔너리에는 새로운 키 값을 추가하거나 기존 키의 값을 수정할 수 있습니다.
-a["fruits"]="plant"
+a["fruits"]="plant" 
 print(a)
 a["cat"]="fur"
 print(a)
@@ -45,9 +45,40 @@ print(Albums)
 # 제거하기 (remove)
 Albums.remove("WHO!(crunch ver.)")
 print(Albums)
-#합집합
+numbersa={"one","two","three"}
+numbersb={"three","four","five"}
+#합집합 (union)
 #합집합은 a와 b가 있을 때, a 와 b의 모든 요소를 하나씩 모은 집합
-#교집합
+print(numbersa.union(numbersb))
+#교집합 (intersection)
 #교집합은 a와 b가 있을 때, 둘의 공통적으로 속하는 요소를 말함.
-#차집합
+print(numbersa.intersection(numbersb))
+#차집합 (difference)
 #한 집합에는 있지만, 다른 집합에는 없는 요소들로 이루어진 집합.
+print(numbersa.difference(numbersb))
+#부분집합 (issubset)
+#a의 모든 요소가 b에 포함되는 집합.
+c={"BBNEXDO","SALAD DAYS","BOYNEXTDOOR", "ZICO"}
+d={"BBNEXDO","BOYNEXTDOOR"}
+print(d.issubset(c))
+#상위집합 (issuperset)
+#b에 a가 다 들어가 있는 집합.
+print(c.issuperset(d))
+year2025=["stanely","slay queen","sigma","67","41","41","rizz"]
+meme=set(year2025)
+print(meme)
+KPOP= {
+    "BOYNEXTDOOR":{"HOLLYWOOD ACTION","Sungho","Riwoo","Jaehyun","Taesan","Leehan","Woonhak"},
+    "Aespa":{"NEXT LEVEL","Ningning","Karina","Winter","Gigele"},
+    "NewJeans":{"ATTENTION","Minji","Haein","Hani","Herin"},
+    "IVE":{"BANG BANG","Gaeul","Yujin","Wonyoung","Rei","Leesso"},
+    "BLACK PINK":{"SHUT DOWN","Jisoo","Jenni","Rose","Lisa"},
+}
+KPOP["BOYNEXTDOOR"].add("bathroom")
+KPOP["Aespa"].add("black magic")
+KPOP["Aespa"].remove("black magic")
+KPOP["Aespa"].add("Rich Man")
+KPOP["NewJeans"].add("right now")
+KPOP["IVE"].add("BANG BANG")
+KPOP["Idle"]=("MONO","Soyeon","Minie","YUQI","Syuhua","Miyeon")
+print(KPOP)
