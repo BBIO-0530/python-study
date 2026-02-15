@@ -1,84 +1,75 @@
-# Dictionary 
-#딕셔너리는 데이터를 키와 값을 쌍으로 저장하는 자료 구조입니다. 중괄호로 정의되며 각 항목은 콜론으로 구분됩니다.
-a={"fruits":"foods","meat":"animal"}
-print(a)
-#값 접근하기
-# 딕셔너리에서 특성 키의 값을 가져올때는 대괄호를 사용합니다. 
-b=a["fruits"]
-print(b)
-# 값 추가 및 수정하기
-# 딕셔너리에는 새로운 키 값을 추가하거나 기존 키의 값을 수정할 수 있습니다.
-a["fruits"]="plant" 
-print(a)
-a["cat"]="fur"
-print(a)
-# 값 제거하기
-#딕셔너리에서 특전 키 값을 제거할 때 "del" 키워드를 사용합니다.
-del a["fruits"]
-print(a)
-# 모든 키와 값 돌아가며 출력하기
-for key, value in a.items():
-    print(f"{key}: {value}")
-# 모든 키 가져오기
-c=a.keys()
-print(c)
-# 모든 값 가져오기
-d=a.values()
-print(d)
-BND={"members":"Sungho,Riwoo,Jaehyun,Taesan,Leehan,Woonhak",
-    "Wonderstick":"BND light stick",
-    "HYBE LABLES":"lable of BND",
-    "KOZ":"BND's entertainment",
-    "ONEDOOR":"BND fans"}
-BND["THE ACTION"]="BND's most famous album"
-BND["KOZ"]="BND home entertaiment"
+# 리스트
+# 리스트는 여러개의 값을 순서대로 저장할 수 있는 자료 구조입니다.
+# 각 항목은 콤마로 구분되며, 값을 추가, 삭제, 수정할 수 있습니다.
+BND = ["onedoor", "members", "ZICO"]
+
+# 인덱스
+# 인덱스란, 리스트에 각 항목에 부여된 고유한 번호이다.
+# 0 부터 시작한다.
+print(BND[2])
+print(BND[-2])
+
+# 항목 추가하기 (append())
+BND.append("HYBE")
+print(BND[-1])
+
+# 항목 삽입하기 (insert())
+BND.insert(1, "songs")
 print(BND)
 
-#집합(set)
-#중복되지 않는 고유한 값들을 저장하는 자료 구조입니다. 중괄호로 정의되고, 순서가 보장되지 않습니다.
-#집합은 수학적 집합 개념을 프로그래밍해서 사용할때 유용합니다.
-Albums={"WHO!","HOW?","Why..","And,","No Genre","19.99","boylife","THE ACTION"}
-print(Albums)
-# 추가하기 (add)
-Albums.add("WHO!(crunch ver.)")
-print(Albums)
-# 제거하기 (remove)
-Albums.remove("WHO!(crunch ver.)")
-print(Albums)
-numbersa={"one","two","three"}
-numbersb={"three","four","five"}
-#합집합 (union)
-#합집합은 a와 b가 있을 때, a 와 b의 모든 요소를 하나씩 모은 집합
-print(numbersa.union(numbersb))
-#교집합 (intersection)
-#교집합은 a와 b가 있을 때, 둘의 공통적으로 속하는 요소를 말함.
-print(numbersa.intersection(numbersb))
-#차집합 (difference)
-#한 집합에는 있지만, 다른 집합에는 없는 요소들로 이루어진 집합.
-print(numbersa.difference(numbersb))
-#부분집합 (issubset)
-#a의 모든 요소가 b에 포함되는 집합.
-c={"BBNEXDO","SALAD DAYS","BOYNEXTDOOR", "ZICO"}
-d={"BBNEXDO","BOYNEXTDOOR"}
-print(d.issubset(c))
-#상위집합 (issuperset)
-#b에 a가 다 들어가 있는 집합.
-print(c.issuperset(d))
-year2025=["stanely","slay queen","sigma","67","41","41","rizz"]
-meme=set(year2025)
-print(meme)
-KPOP= {
-    "BOYNEXTDOOR":{"HOLLYWOOD ACTION","Sungho","Riwoo","Jaehyun","Taesan","Leehan","Woonhak"},
-    "Aespa":{"NEXT LEVEL","Ningning","Karina","Winter","Gigele"},
-    "NewJeans":{"ATTENTION","Minji","Haein","Hani","Herin"},
-    "IVE":{"BANG BANG","Gaeul","Yujin","Wonyoung","Rei","Leesso"},
-    "BLACK PINK":{"SHUT DOWN","Jisoo","Jenni","Rose","Lisa"},
-}
-KPOP["BOYNEXTDOOR"].add("bathroom")
-KPOP["Aespa"].add("black magic")
-KPOP["Aespa"].remove("black magic")
-KPOP["Aespa"].add("Rich Man")
-KPOP["NewJeans"].add("right now")
-KPOP["IVE"].add("BANG BANG")
-KPOP["Idle"]=("MONO","Soyeon","Minie","YUQI","Syuhua","Miyeon")
-print(KPOP)
+# 항목 제거하기 (remove())
+BND.remove("songs")
+print(BND)
+
+# 인덱스로 항목 제거하기 (pop())
+BND.pop(3)
+print(BND)
+
+# 항목 찾기 (index())
+a = BND.index("onedoor")
+print(a)
+
+# 인덱스로 값 출력하기
+print(BND[0]) 
+
+# 리스트 슬라이싱
+# 리스트의 특정 부분을 추출할때에 슬라이싱을 사용한다.
+# 슬라이싱은 [start_index:stop_index:step] 형식으로 사용된다.
+a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a[1:4])  # 출력 값: 1 2 3
+print(a[:5])   # 출력 값: 0 1 2 3 4
+print(a[::-1])
+
+# 튜플 (tuple)
+# 튜플은 리스트와 유사하지만, 변하지 않은 데이터를 저장핼 때 사용됩니다. 
+# ()로 정의되며, 각 항목은 콤마로 구분됩니다
+color = ('red', 'blue', 'green')
+print(color)
+print(color[-1])  # 튜플도 인덱스 값을 사용한다.
+
+# 인덱스와 카운트가 사용 가능하다.
+# 카운트는 특정값이 몆번 나타나는 지 셀때 사용한다.
+b = (1, 1, 1, 2, 3, 3, 4)
+c = b.count(1)
+print(c)
+
+# 멤버 정보 (리스트 내 튜플 구조)
+member = [
+    ('성호', '03년생', '54cm'),
+    ('리우', '03년생', '댄싱머신', '개그'),
+    ('재현', '03년생', '똥강아지'),
+    ('태산', '04년생', '태마태'),
+    ('이한', '04년생', '물고기 왕자'),
+    ('운학', '06년생', '눈사람')
+]
+
+print(member)
+print({member[0][0]})
+
+# f-string을 이용한 출력
+print(f"1. 이름 : {member[0][0]}  나이 : {member[0][1]} 특징 : {member[0][2]}")
+print(f"2. 이름 : {member[1][0]}  나이 : {member[1][1]} 특징 : {member[1][2]}")
+print(f"3. 이름 : {member[2][0]}  나이 : {member[2][1]} 특징 : {member[2][2]}")
+print(f"4. 이름 : {member[3][0]}  나이 : {member[3][1]} 특징 : {member[3][2]}")
+print(f"5. 이름 : {member[4][0]}  나이 : {member[4][1]} 특징 : {member[4][2]}")
+print(f"6. 이름 : {member[5][0]}  나이 : {member[5][1]} 특징 : {member[5][2]}")
