@@ -1,84 +1,129 @@
 # Dictionary 
-#딕셔너리는 데이터를 키와 값을 쌍으로 저장하는 자료 구조입니다. 중괄호로 정의되며 각 항목은 콜론으로 구분됩니다.
-a={"fruits":"foods","meat":"animal"}
+# 딕셔너리는 데이터를 키와 값을 쌍으로 저장하는 자료 구조입니다. 중괄호로 정의되며 각 항목은 콜론으로 구분됩니다.
+a = {"fruits": "foods", "meat": "animal"}
 print(a)
-#값 접근하기
+
+# 값 접근하기
 # 딕셔너리에서 특성 키의 값을 가져올때는 대괄호를 사용합니다. 
-b=a["fruits"]
+b = a["fruits"]
 print(b)
+
 # 값 추가 및 수정하기
 # 딕셔너리에는 새로운 키 값을 추가하거나 기존 키의 값을 수정할 수 있습니다.
-a["fruits"]="plant" 
+a["fruits"] = "plant" 
 print(a)
-a["cat"]="fur"
+a["cat"] = "fur"
 print(a)
+
 # 값 제거하기
-#딕셔너리에서 특전 키 값을 제거할 때 "del" 키워드를 사용합니다.
+# 딕셔너리에서 특전 키 값을 제거할 때 "del" 키워드를 사용합니다.
 del a["fruits"]
 print(a)
+
 # 모든 키와 값 돌아가며 출력하기
 for key, value in a.items():
     print(f"{key}: {value}")
+
 # 모든 키 가져오기
-c=a.keys()
+c = a.keys()
 print(c)
+
 # 모든 값 가져오기
-d=a.values()
+d = a.values()
 print(d)
-BND={"members":"Sungho,Riwoo,Jaehyun,Taesan,Leehan,Woonhak",
-    "Wonderstick":"BND light stick",
-    "HYBE LABLES":"lable of BND",
-    "KOZ":"BND's entertainment",
-    "ONEDOOR":"BND fans"}
-BND["THE ACTION"]="BND's most famous album"
-BND["KOZ"]="BND home entertaiment"
+
+
+# ==========================================
+
+
+BND = {
+    "members": "Sungho,Riwoo,Jaehyun,Taesan,Leehan,Woonhak",
+    "Wonderstick": "BND light stick",
+    "HYBE LABLES": "lable of BND",
+    "KOZ": "BND's entertainment",
+    "ONEDOOR": "BND fans"
+}
+
+BND["THE ACTION"] = "BND's most famous album"
+BND["KOZ"] = "BND home entertaiment"
 print(BND)
 
-#집합(set)
-#중복되지 않는 고유한 값들을 저장하는 자료 구조입니다. 중괄호로 정의되고, 순서가 보장되지 않습니다.
-#집합은 수학적 집합 개념을 프로그래밍해서 사용할때 유용합니다.
-Albums={"WHO!","HOW?","Why..","And,","No Genre","19.99","boylife","THE ACTION"}
+
+# ==========================================
+
+
+# 집합(set)
+# 중복되지 않는 고유한 값들을 저장하는 자료 구조입니다. 중괄호로 정의되고, 순서가 보장되지 않습니다.
+# 집합은 수학적 집합 개념을 프로그래밍해서 사용할때 유용합니다.
+Albums = {"WHO!", "HOW?", "Why..", "And,", "No Genre", "19.99", "boylife", "THE ACTION"}
 print(Albums)
+
 # 추가하기 (add)
 Albums.add("WHO!(crunch ver.)")
 print(Albums)
+
 # 제거하기 (remove)
 Albums.remove("WHO!(crunch ver.)")
 print(Albums)
-numbersa={"one","two","three"}
-numbersb={"three","four","five"}
-#합집합 (union)
-#합집합은 a와 b가 있을 때, a 와 b의 모든 요소를 하나씩 모은 집합
+
+
+# ==========================================
+
+
+numbersa = {"one", "two", "three"}
+numbersb = {"three", "four", "five"}
+
+# 합집합 (union)
+# 합집합은 a와 b가 있을 때, a 와 b의 모든 요소를 하나씩 모은 집합
 print(numbersa.union(numbersb))
-#교집합 (intersection)
-#교집합은 a와 b가 있을 때, 둘의 공통적으로 속하는 요소를 말함.
+
+# 교집합 (intersection)
+# 교집합은 a와 b가 있을 때, 둘의 공통적으로 속하는 요소를 말함.
 print(numbersa.intersection(numbersb))
-#차집합 (difference)
-#한 집합에는 있지만, 다른 집합에는 없는 요소들로 이루어진 집합.
+
+# 차집합 (difference)
+# 한 집합에는 있지만, 다른 집합에는 없는 요소들로 이루어진 집합.
 print(numbersa.difference(numbersb))
-#부분집합 (issubset)
-#a의 모든 요소가 b에 포함되는 집합.
-c={"BBNEXDO","SALAD DAYS","BOYNEXTDOOR", "ZICO"}
-d={"BBNEXDO","BOYNEXTDOOR"}
+
+
+# ==========================================
+
+
+# 부분집합 (issubset)
+# a의 모든 요소가 b에 포함되는 집합.
+c = {"BBNEXDO", "SALAD DAYS", "BOYNEXTDOOR", "ZICO"}
+d = {"BBNEXDO", "BOYNEXTDOOR"}
 print(d.issubset(c))
-#상위집합 (issuperset)
-#b에 a가 다 들어가 있는 집합.
+
+# 상위집합 (issuperset)
+# b에 a가 다 들어가 있는 집합.
 print(c.issuperset(d))
-year2025=["stanely","slay queen","sigma","67","41","41","rizz"]
-meme=set(year2025)
+
+
+# ==========================================
+
+
+year2025 = ["stanely", "slay queen", "sigma", "67", "41", "41", "rizz"]
+meme = set(year2025)
 print(meme)
-KPOP= {
-    "BOYNEXTDOOR":{"HOLLYWOOD ACTION","Sungho","Riwoo","Jaehyun","Taesan","Leehan","Woonhak"},
-    "Aespa":{"NEXT LEVEL","Ningning","Karina","Winter","Gigele"},
-    "NewJeans":{"ATTENTION","Minji","Haein","Hani","Herin"},
-    "IVE":{"BANG BANG","Gaeul","Yujin","Wonyoung","Rei","Leesso"},
-    "BLACK PINK":{"SHUT DOWN","Jisoo","Jenni","Rose","Lisa"},
+
+
+# ==========================================
+
+
+KPOP = {
+    "BOYNEXTDOOR": {"HOLLYWOOD ACTION", "Sungho", "Riwoo", "Jaehyun", "Taesan", "Leehan", "Woonhak"},
+    "Aespa": {"NEXT LEVEL", "Ningning", "Karina", "Winter", "Gigele"},
+    "NewJeans": {"ATTENTION", "Minji", "Haein", "Hani", "Herin"},
+    "IVE": {"BANG BANG", "Gaeul", "Yujin", "Wonyoung", "Rei", "Leesso"},
+    "BLACK PINK": {"SHUT DOWN", "Jisoo", "Jenni", "Rose", "Lisa"},
 }
+
 KPOP["BOYNEXTDOOR"].add("bathroom")
 KPOP["Aespa"].add("black magic")
 KPOP["Aespa"].remove("black magic")
 KPOP["Aespa"].add("Rich Man")
 KPOP["NewJeans"].add("right now")
 KPOP["IVE"].add("BANG BANG")
-KPOP["Idle"]=("MONO","Soyeon","Minie","YUQI","Syuhua","Miyeon")
-print(KPOP)
+KPOP["Idle"] = ("MONO", "Soyeon", "Minie", "YUQI", "Syuhua", "Miyeon")
+print(KPOP))
