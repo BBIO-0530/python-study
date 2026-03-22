@@ -32,6 +32,17 @@ print(a)
 # 인덱스로 값 출력하기
 print(BND[0]) 
 
+# 항목 정렬하기 (sort())
+# 리스트 안의 항목들을 오름차순(가나다순, 숫자 크기순)으로 정렬합니다.
+num_list = [5, 2, 8, 1, 9]
+num_list.sort()
+print(num_list)
+
+# 내림차순(역순)으로 정렬하고 싶을 때는 괄호 안에 reverse=True를 적어줍니다.
+member_names = ["태산", "성호", "리우", "명재현", "이한", "운학"]
+member_names.sort(reverse=True)
+print(member_names)
+
 
 # ==========================================
 
